@@ -1,0 +1,47 @@
+@import '../../main.scss';
+
+.Modal{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+
+background-color: $colorWhite !important;
+min-width: 400px;
+z-index: 999;
+overflow:scroll;
+max-height: 500px;
+display: none;
+
+}
+
+.title{
+    font-weight: bolder;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.modalHeader{
+display: flex;
+min-height: 60px;
+align-items: center;
+justify-content: space-between;
+font-weight: bold;
+background-color: $colorOrange;
+color: $colorWhite;
+padding: 10px;
+
+}
+
+.show{
+display: block;
+}
+
+.modalBody{
+padding: 20px;
+
+}
+
+.modalFooter{
+
+}

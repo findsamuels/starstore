@@ -1,0 +1,46 @@
+@import '../../main.scss';
+
+.Banner{
+    min-height: 600px;
+position: relative;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    color: $colorWhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.overLay{
+   
+    width: 100%;
+    opacity: .8;
+    height: 100%;
+    background-color: $colorDarkGrey;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bannerSubtitle{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    color: $colorWhite;
+
+    h1{
+        text-transform: uppercase;
+        font-style: italic;
+    }
+    p{
+        font-style: italic;
+    }
+}
+

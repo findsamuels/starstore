@@ -1,0 +1,15 @@
+@import '../../main.scss';
+
+.RightHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    @include respond(tablet){
+        display: none;
+    }
+}
+

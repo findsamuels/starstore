@@ -1,0 +1,11 @@
+@import '../main.scss';
+
+.AuthUser{
+    background-color: $colorOrange;
+    color: $colorWhite;
+
+    &:hover{
+        background-color: $colorDarkOrange;
+    }
+}
+

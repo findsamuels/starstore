@@ -1,0 +1,65 @@
+@import '../../main.scss';
+
+.CartItems{
+    width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+overflow: none;
+
+margin: 0 auto;
+border-bottom: solid 1px $colorGray;
+padding: 10px;
+}
+img{
+    width: 100%;
+    
+}
+
+.addAndRemove{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+
+padding: 5px;
+}
+
+.icons{
+    font-size: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 $colorGray;
+    color: $colorDarkGrey;
+cursor: pointer;
+border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    
+    &:hover{
+        box-shadow: 0 2px 6px 0 $colorGray;
+       
+    }
+
+   
+}
+
+.totalPrice{
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    width: 100%;
+    background-color: $colorOrange;
+    color: $colorWhite;
+}
+.submitSection{
+    border-bottom: 1px solid $colorGray;
+    border-top: 1px solid $colorGray;
+width: 100%;
+padding: 10px;
+text-align: end;
+}
+
+.quantity{
+    padding-left: 5px;
+    font-style: italic;
+    color: $colorDarkOrange;
+}

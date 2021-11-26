@@ -1,0 +1,14 @@
+@import '../../main.scss';
+
+.Header{
+    min-height: 50px;
+    background-color: $colorBlack;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: $colorWhite;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}

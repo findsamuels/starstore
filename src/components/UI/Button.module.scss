@@ -1,0 +1,37 @@
+
+@import '../../main.scss';
+
+.Button{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $colorOrange;
+    transition: all 0.2s;
+    cursor: pointer;
+    outline: none;
+    color: $colorWhite;
+
+    &:disabled{
+        background-color: $colorGray;
+        cursor: not-allowed;
+        &:hover{
+            background-color: $colorGray;
+        }
+    }
+    &:hover{
+        background-color: $colorDarkOrange;
+    }
+
+}
+
+.white{
+    background-color: $colorWhite;
+    color: $colorOrange;
+
+    &:hover{
+        background-color: $colorDarkOrange;
+        color: $colorWhite;
+    }
+
+}
+

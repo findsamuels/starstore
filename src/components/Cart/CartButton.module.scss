@@ -1,0 +1,29 @@
+@import '../../main.scss';
+
+.CartButtonContainer{
+    padding: 10px;
+    margin-right: 0;
+    position: relative;
+}
+
+.CartButton{
+    color: $colorWhite;
+   
+    cursor: pointer;
+    
+}
+
+.CartAmount{
+    color: $colorGreen;
+    font-size: 10px;
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    background-color: $colorDarkYellow;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+}
+
+

@@ -1,0 +1,29 @@
+@import '../../main.scss';
+
+
+.Card{
+    
+    @include boxShadow;
+    
+
+    &:hover{
+        @include boxShadowHover
+    }
+
+    img{
+        width: auto;
+        max-height: 350px;
+        margin: 0  auto;
+    }
+}
+
+.center{
+    background-position: center;
+}
+
+.none{
+    box-shadow: none;
+    &:hover{
+        box-shadow: none;
+    }
+}

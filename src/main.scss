@@ -1,0 +1,43 @@
+
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorLightBlue: #178fe8;
+$colorYellow: #ffff00;
+$colorDarkYellow: #aaaa08;
+$colorGreen: green;
+$colorOrange: orange;
+$colorDarkOrange: #cf5e02;
+$colorRed: red;
+$colorGray: #ccc;
+$colorDarkGrey: #2c2c2c;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==tablet {
+
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+}
+
+@mixin boxShadow{
+  box-shadow: 0 4px 8px 0 $colorDarkGrey;
+  transition: 0.3s;
+}
+@mixin boxShadowHover{
+  box-shadow: 0 2px 6px 0 $colorDarkGrey;
+}
+
+@mixin center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+}
+

@@ -1,0 +1,56 @@
+@import '../../main.scss';
+
+
+
+.Select{
+    border: .5px $colorGray solid;
+    
+    padding:8px;
+    border-radius: 0;
+}
+
+
+
+.Radio{
+    display: flex;
+    flex: 1 0;
+    justify-content: space-between;
+    padding: 8px 0 ;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+
+   
+
+    @include respond(tablet){
+        width: 20%;
+    }
+}
+
+
+input{
+    width: auto;
+    padding:8px;
+    flex-basis: 20%;
+
+
+}
+label{
+    flex-basis: 80%;
+    padding: 0 10px 10px 0;
+}
+
+.gray{
+border: .5px $colorGray solid;
+
+}
+
+.none{
+border: none;
+}
+
+.inputGroup{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
