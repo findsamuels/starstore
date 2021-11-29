@@ -4,9 +4,9 @@ import classes from './Wrapper.module.scss'
 
 const Wrapper = props => {
     return (
-        <Row className={`${classes.Wrapper} ${props.className}`}>
+        <div className={`${classes.Wrapper} ${props.className}`}>
             {props.children}
-        </Row>
+        </div>
     )
 }
 

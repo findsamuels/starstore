@@ -9,8 +9,8 @@
     background-color: $colorDarkGrey;
     margin: 0 auto;
 
-    @include respond(tablet){
-        display: block;
-        text-align: start;
-    }
+    // @include respond(tablet){
+    //     display: block;
+    //     text-align: start;
+    // }
 }

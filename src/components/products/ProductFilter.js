@@ -48,25 +48,8 @@ const ProductFilter = props => {
     console.log(productCategory)
     return (
         <div className={classes.ProductFilter}>
-            <p className={classes.pathBreadCrumb}>{match.url}</p>
-            
-            <h4 className = 'paddingMd'>FILTER</h4>
             <Input onChange={filterTitleHandler} border='grayBorder' elementConfig='text' value={filteredInput} placeholder='Filter by title'/>
                 
-          
-
-            {/* <h4 className = 'paddingMd'>CATEGORY TYPE</h4>
-            <Form>
-            <div onChange={categoryHandler}>
-            <Input checked  name='categoryType' label='All Clothing' type='radio' elementConfig='radio' id='allProducts' value={`products`}/>
-            <Input  name='categoryType' label='Men Category' type='radio' elementConfig='radio' id='menCategory' value={`men's clothing`}/>
-          
-            
-            <Input name='categoryType' label='Women Category' elementConfig='radio' type='radio'  id='womenCategory' value={`women's clothing`}/>
-            <Input name='categoryType' label='Jewerly' elementConfig='radio'  type='radio' id='jewerly' value={`jewelery`}/>
-          </div>
-
-            </Form> */}
             
         </div>
     )

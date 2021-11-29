@@ -4,7 +4,7 @@ import Input from '../Form/Input'
 import classes from './SelectedProduct.module.scss'
 import Button from '../UI/Button'
 import Card from '../UI/Card'
-import { Col } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import { useForm } from '../../hooks/use-form'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '../../store/cartSlice'
@@ -67,7 +67,7 @@ const cartItems = {
 
    }
     return (
-        <Fragment>
+        <Row className='centeredRow'>
             <Col md='3'>
     <Card boxShadow='none' Key={selectedProduct.id}  className={classes.Products} >
 <img src={selectedProduct.image} alt={selectedProduct.id}/>
@@ -100,7 +100,7 @@ const cartItems = {
    
    
     </Col>
-        </Fragment>
+        </Row>
     )
 }
 

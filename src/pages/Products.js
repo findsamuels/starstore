@@ -8,6 +8,7 @@ import { Col, Row } from 'react-bootstrap'
 import ProductItems from '../components/products/ProductItems'
 import {useRouteMatch}  from 'react-router-dom'
 import Wrapper from '../components/UI/Wrapper'
+import PageHeader from '../components/PageHeader'
 
 
 
@@ -29,12 +30,12 @@ const Products = () => {
    
   
    else if(filteredProducts.length === 0 ){
-    myProducts = <ProductItems url='productUrl'   
+    myProducts = <ProductItems boxShadow='none' url='productUrl'   
     products={allProducts.filter(products => products.category !== 'electronics')}/>
 
     }
     else if(filteredProducts.length !== 0){
-      myProducts =   <ProductItems url='productUrl'   
+      myProducts =   <ProductItems boxShadow='none' url='productUrl'   
       products={filteredProducts.filter(products => products.category !== 'electronics')}/>
         
 
@@ -50,13 +51,14 @@ const Products = () => {
 
     return (
         <Wrapper>
-            <Col md='2'>
-            <ProductFilter />
-            </Col>
-    
-            <Col md='8'>   
+            <PageHeader title='Star store products' description={`This is where you will find all of our amazing clothing, we make sure to cover everyone's needs so feel free to find what you need.`}/>
+            <Row className='centeredRow'>
+            
+            <ProductFilter /> 
            {myProducts}
-          </Col>
+          
+            </Row>
+            
            
         </Wrapper>
     )

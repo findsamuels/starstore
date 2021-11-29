@@ -40,8 +40,8 @@ let url = '';
             <Link 
 
             to={url} >
-      <Card Key={item.id} background={item.image} className={classes.Products} >
-        
+      <Card boxShadow={props.boxShadow} Key={item.id} className={classes.Products} >
+      <img src={item.image} alt={item.id}/>
                 <div className={classes.descAndTitle}>
                 <h5>{item.title}</h5>
                 {item.price && <h5 className={classes.price}>${item.price}</h5>}

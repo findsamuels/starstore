@@ -11,6 +11,7 @@ import { useRouter } from '../hooks/use-router'
 import ProductFilter from '../components/products/ProductFilter'
 import ProductItems from '../components/products/ProductItems'
 import Wrapper from '../components/UI/Wrapper'
+import PageHeader from '../components/PageHeader'
 
 const ProductType = () => {
 
@@ -40,10 +41,10 @@ const ProductType = () => {
     }
 
     else if(filteredProducts.length === 0 ){
-        showProductType = <ProductItems  url='productTypeUrl' products={allProducts.filter(products => products.category == params.productCategory)}/>
+        showProductType = <ProductItems boxShadow='none'  url='productTypeUrl' products={allProducts.filter(products => products.category == params.productCategory)}/>
     }
     else if(filteredProducts.length !== 0){
-        showProductType = <ProductItems  url='productTypeUrl' products={filteredProducts.filter(products => products.category == params.productCategory)}/>
+        showProductType = <ProductItems boxShadow='none'  url='productTypeUrl' products={filteredProducts.filter(products => products.category == params.productCategory)}/>
     }
 
    
@@ -51,14 +52,16 @@ const ProductType = () => {
     
     return (  
         <Wrapper className='productItems'>
-        <Col md='2'>
+            <PageHeader title={params.productCategory} description={`You can find different collection of our ${params.productCategory} , feel free to find something that suits your needs.`}/>
+           
+            <Row className='centeredRow'>
+          
         <ProductFilter  breadCrumbUrl={`Home > Products > ${params.productCategory}`} />
-        </Col>
-            
-            <Col md='8'>
-  
+        
             {showProductType}
-            </Col>
+   
+            </Row>
+        
             
             
         </Wrapper> 

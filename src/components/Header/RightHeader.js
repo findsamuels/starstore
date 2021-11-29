@@ -8,7 +8,7 @@ import CartButton from '../Cart/CartButton'
 const RightHeader = () => {
     return (
         <div className={classes.RightHeader}>
-            <SearchBar/>
+           
             <AuthUser/>
             <CartButton/>
         </div>

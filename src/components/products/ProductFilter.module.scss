@@ -2,6 +2,8 @@
 
 .ProductFilter{
    
+    text-align: end;
+    padding: 10px;
 
     h4{
         color: $colorDarkGrey;
@@ -20,7 +22,9 @@
 }
 
 .pathBreadCrumb{
-    border-top: 1px solid $colorGray;
+    
+    color: $colorDarkGrey;
+    font-style: italic;
     padding-top: 5px;
     text-transform: capitalize;
 }

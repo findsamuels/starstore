@@ -3,8 +3,7 @@
 
 
 .ProductItems{
-    
-    height: auto;
+
     margin: 0 20px;
     overflow: hidden;
     position: relative;
@@ -13,17 +12,17 @@
 
     @include respond(tablet){
         width: 80%;
-        height: 100%;
+        
     }
    
 }
 
 .Products {
-    min-height: 250px;
-    height: auto;
+ 
     margin: 30px auto;
     position: relative;
     width: 100%;
+    
    
 }
 .img{

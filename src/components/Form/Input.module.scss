@@ -30,8 +30,10 @@
 
 input{
     width: auto;
-    padding:8px;
+    padding:6px;
     flex-basis: 20%;
+
+    border: 1px solid $colorGray;
 
 
 }
