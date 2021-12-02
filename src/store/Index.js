@@ -4,6 +4,8 @@ import productCategoryReducer from './productCategorySlice'
 import selectedProductReducer from './selectedProductSlice'
 import cartReducer from './cartSlice'
 import uiReducer from './uiSlice'
+import authReducer from './authSlice'
+
 
 const store = configureStore({
 
@@ -12,7 +14,8 @@ products: productReducer,
 productCategory: productCategoryReducer,
 selectedProduct: selectedProductReducer,
 cart: cartReducer,
-ui: uiReducer
+ui: uiReducer,
+auth: authReducer,
 }
 
 })

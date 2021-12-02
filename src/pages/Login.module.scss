@@ -1,0 +1,48 @@
+@import '../main.scss';
+
+
+.Login{
+
+width: 60%;
+margin: 40px auto;
+padding: 20px;
+border: solid 2px $colorGray;
+
+@include respond(phone){
+    width: 80%;
+}
+
+.help{
+    text-align: center;
+    color:$colorDarkGrey;
+    padding: 10px;
+    }
+
+}
+
+.registerLogin{
+    color: $colorDarkOrange;
+    margin-bottom:10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: end;
+    width: max-content;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+        color: $colorDarkOrange;
+    }
+}
+
+.errorMessage{
+color: $colorRed;
+text-align: start;
+padding: 0
+}
+
+h2{
+color: $colorDarkGrey;
+text-align: start;
+font-weight: bolder;
+}
+

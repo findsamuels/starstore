@@ -42,7 +42,7 @@ const removeProductHandler = (id,title,price,totalItemPrice,disabled) => {
 let cartItem = ''
 cartItem = cartItems.map(item => {
     return(
-        <Row className={classes.CartItems}>
+        <Row key={item.id} className={classes.CartItems}>
  <Col xs='7'>
                 <h5>{item.title} <span className={classes.quantity}> * {item.quantity}</span></h5>
                 <p>${item.price.toFixed(2)}</p>
@@ -67,7 +67,7 @@ cartItem = cartItems.map(item => {
         {cartItems.length > 0 && <Fragment>{cartItem}
             <h6 className={classes.totalPrice}>Total Price: ${totalPrice.toFixed(2)}</h6>
             <div className={classes.submitSection}>
-            <Button onClick=''>Check Out</Button>
+            <Button >Check Out</Button>
             </div></Fragment> }
              
           

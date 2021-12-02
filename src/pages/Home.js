@@ -5,7 +5,6 @@ import ProductItems from '../components/products/ProductItems'
 import women from '../assets/img/men.jpg'
 import men from '../assets/img/womens.jpg'
 import Jewerly from '../assets/img/jewerly.jpg'
-import { Row } from 'react-bootstrap'
 import Wrapper from '../components/UI/Wrapper'
 const Home = () => {
 

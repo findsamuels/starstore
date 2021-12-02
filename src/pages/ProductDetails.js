@@ -4,7 +4,6 @@ import { useParams } from 'react-router'
 import { getSelectedProductSlice } from '../store/selectedProductSlice'
 import { useDispatch } from 'react-redux'
 
-import classes from './ProductDetails.module.scss'
 import Wrapper from '../components/UI/Wrapper'
 import SelectedProduct from '../components/products/SelectedProduct'
 
@@ -16,8 +15,7 @@ const ProductDetails = () => {
     useEffect(() => {
         dispatch(getSelectedProductSlice(params.productDetails))
 
-        console.log(params)
-    },[])
+    },[dispatch, params])
     
     const {selectedProduct,loading,errorMessage} = useSelector(state => state.selectedProduct)
     let selectedProductDiv = ''

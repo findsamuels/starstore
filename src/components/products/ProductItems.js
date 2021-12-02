@@ -3,15 +3,11 @@ import classes from './ProductItems.module.scss'
 import Card from '../UI/Card'
 
 
-import { Link , useRouteMatch, useParams} from 'react-router-dom'
+import { Link , useRouteMatch} from 'react-router-dom'
 import { Col, Row } from 'react-bootstrap'
 
 const ProductItems = props => {
 const match = useRouteMatch()
-const params = useParams()
-console.log(match)
-console.log(params.productCategory)
-
 
 
 let myProductItems = ''

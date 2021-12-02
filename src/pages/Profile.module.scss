@@ -1,0 +1,37 @@
+@import '../main.scss';
+
+
+.Profile{
+
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+    border: solid 2px $colorGray;
+    
+    @include respond(phone){
+        width: 80%;
+    }
+    
+    }
+
+    .ProfileHeader{
+        text-align: center;
+        text-transform: uppercase;
+        color: $colorDarkGrey;
+        padding-top: 20px;
+    }
+
+    .registerLogin{
+        color: $colorDarkOrange;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: end;
+        width: max-content;
+        padding-top: 10px;
+    }
+    
+    .errorMessage{
+    color: $colorRed;
+    text-align: start;
+    padding: 0;
+    }

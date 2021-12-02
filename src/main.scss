@@ -9,7 +9,7 @@ $colorOrange: orange;
 $colorDarkOrange: #cf5e02;
 $colorRed: red;
 $colorGray: #ccc;
-$colorDarkGrey: #2c2c2c;
+$colorDarkGrey: #464545;
 
 @mixin respond($breakpoint) {
     @if $breakpoint==tablet {

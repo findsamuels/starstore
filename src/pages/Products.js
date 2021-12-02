@@ -1,12 +1,10 @@
 import React from 'react'
 import ProductFilter from '../components/products/ProductFilter'
 
-import classes from './Products.module.scss'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
-import { Col, Row } from 'react-bootstrap'
+import {  Row } from 'react-bootstrap'
 import ProductItems from '../components/products/ProductItems'
-import {useRouteMatch}  from 'react-router-dom'
 import Wrapper from '../components/UI/Wrapper'
 import PageHeader from '../components/PageHeader'
 
@@ -14,11 +12,8 @@ import PageHeader from '../components/PageHeader'
 
 const Products = () => {
 
-    const match = useRouteMatch()
     let myProducts = ''
     const {allProducts, loading,errorMessage,filteredProducts}  = useSelector(state => state.products)
-
-    console.log(allProducts)
     if(loading){
         myProducts = <p>Loading...</p>  
    

@@ -1,18 +1,18 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Form from '../Form/Form'
 import Input from '../Form/Input'
 import classes from './SelectedProduct.module.scss'
 import Button from '../UI/Button'
 import Card from '../UI/Card'
 import { Col, Row } from 'react-bootstrap'
-import { useForm } from '../../hooks/use-form'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '../../store/cartSlice'
 const SelectedProduct = props => {
    const selectedProduct = props.products
    const dispatch = useDispatch()
 
-   const {disabled, cartItems: myCart} = useSelector(state => state.cart)
+   const {cartItems: myCart} = useSelector(state => state.cart)
 
    const [isAdded, setIsAdded] = useState(false)
 
@@ -22,14 +22,12 @@ const SelectedProduct = props => {
         
         if(currentCart){
      
-                setIsAdded(true)
-          
-            console.log('product added')
+                setIsAdded(true)   
         }
         else{
             setIsAdded(false)
         }
-    }, [myCart])
+    }, [selectedProduct,myCart])
 
 
 const [quantity, dispatchQuantity] = useState(1);
@@ -54,16 +52,7 @@ const cartItems = {
     totalItemPrice: price * quantity
 }
 
-
-
-    
     dispatch(cartActions.addProduct(cartItems))  
-
-
-
-
-
-
 
    }
     return (
@@ -82,8 +71,8 @@ const cartItems = {
     : 'bolder'}}>${selectedProduct.price}</p>
     <div>
     <Form onChange={formHandler}>
-                <Input onChange={qtySelectHandler} label='Select Quantity'  id='productsQuantity' name='productsQuantity' elementConfig='select'>
-                    <option selected value={1}>1</option>
+                <Input onChange={qtySelectHandler} label='Select Quantity'  id='productsQuantity' name='productsQuantity' elementconfig='select'>
+                    <option value={1}>1</option>
                     <option value={2}>2</option>
                     <option value={3}>3</option>
                     <option value={4}>4</option>

@@ -32,10 +32,26 @@ input{
     width: auto;
     padding:6px;
     flex-basis: 20%;
-
+    border-radius: 5px;
     border: 1px solid $colorGray;
+  
+   
 
+}
+.invalid{
+    border: 1px solid $colorRed;      
+}
+.isValid{
+    border: 1px solid $colorGreen;    
+  
+ 
+}
 
+.block{
+    display: block;
+    width: 100%;
+ 
+    margin: 10px 0 10px 0;
 }
 label{
     flex-basis: 80%;

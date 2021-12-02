@@ -1,5 +1,5 @@
 
-import { useHistory, useParams, useLocation } from "react-router-dom"
+import { useHistory} from "react-router-dom"
 
 export const useRouter = () => {
 

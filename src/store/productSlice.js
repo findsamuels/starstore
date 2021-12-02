@@ -1,6 +1,4 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
-import waterDiffuser from '../../src/assets/img/waterDiffuser.jpg'
-import oilDiffuser from '../../src/assets/img/oilDiffuser.jpg'
 import axios from 'axios'
 const initialProductState = {
 

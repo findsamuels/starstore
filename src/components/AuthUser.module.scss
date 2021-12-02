@@ -9,3 +9,34 @@
     }
 }
 
+.AuthUserProfile{
+    background-color: transparent;
+    margin-right: 10px;
+    margin-right: 10px;
+    color: $colorWhite;
+    border: solid 0.5px $colorDarkOrange;
+
+    &:hover{
+        background-color: $colorDarkOrange;
+        color: $colorWhite;
+    }
+}
+
+a{
+    color: $colorWhite;
+}
+
+
+.loggedInDiv{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p{
+        padding-right: 20px;
+        padding-top: 20px;
+        color: $colorWhite;
+    }
+}
+
