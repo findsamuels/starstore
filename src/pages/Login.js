@@ -150,7 +150,7 @@ confirmRegistration = <p style={{textAlign: 'start', color: 'grey'}}>Loading...<
         <p className={classes.errorMessage}>{userNameErrorMessage}</p>
 
 
-            <Input istouched={passwordTouched.toString()} isvalid={passwordValid.toString()} onBlur={passwordBlur} onChange={passwordhandler} value={passwordData} display='block' label='Password'/>
+            <Input type='password' istouched={passwordTouched.toString()} isvalid={passwordValid.toString()} onBlur={passwordBlur} onChange={passwordhandler} value={passwordData} display='block' label='Password'/>
            <p className={classes.errorMessage}>{passwordErrorMessage}</p>
 
 

@@ -6,6 +6,7 @@ import women from '../assets/img/men.jpg'
 import men from '../assets/img/womens.jpg'
 import Jewerly from '../assets/img/jewerly.jpg'
 import Wrapper from '../components/UI/Wrapper'
+import classes from './Home.module.scss'
 const Home = () => {
 
     const allProducts = [
@@ -37,7 +38,7 @@ const Home = () => {
   <Banner backgroundImage={bannerImage} headerText='welcome to star store' paragraphText='Your home to luxury fashion'/>
         <Wrapper>
           
-           <ProductItems  url='productCategoryUrl' products={allProducts}/>
+           <ProductItems className={classes.homeProduct}  url='productCategoryUrl' products={allProducts}/>
        
         </Wrapper>
        </Fragment>

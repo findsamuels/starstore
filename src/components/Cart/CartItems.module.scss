@@ -10,6 +10,7 @@ overflow: none;
 margin: 0 auto;
 border-bottom: solid 1px $colorGray;
 padding: 10px;
+flex-wrap: wrap;
 }
 img{
     width: 100%;
@@ -23,6 +24,10 @@ align-items: center;
 padding: 10px;
 
 padding: 5px;
+
+@include respond(phone){
+    width: 60%
+}
 }
 
 .icons{

@@ -10,6 +10,8 @@ import ProductFilter from '../components/products/ProductFilter'
 import ProductItems from '../components/products/ProductItems'
 import Wrapper from '../components/UI/Wrapper'
 import PageHeader from '../components/PageHeader'
+import classes from './ProductType.module.scss'
+import Loading from '../components/UI/Loading'
 
 const ProductType = () => {
 
@@ -27,7 +29,7 @@ const ProductType = () => {
    
     let showProductType = ''
     if(loading){
-        showProductType = <p>Loading...</p>  
+        showProductType = <Loading/>  
    
     }
     else if(!loading && errorMessage !== null){
@@ -35,10 +37,10 @@ const ProductType = () => {
     }
 
     else if(filteredProducts.length === 0 ){
-        showProductType = <ProductItems boxShadow='none'  url='productTypeUrl' products={allProducts.filter(products => products.category === params.productCategory)}/>
+        showProductType = <ProductItems className={classes.myproducts} boxShadow='none'  url='productTypeUrl' products={allProducts.filter(products => products.category === params.productCategory)}/>
     }
     else if(filteredProducts.length !== 0){
-        showProductType = <ProductItems boxShadow='none'  url='productTypeUrl' products={filteredProducts.filter(products => products.category === params.productCategory)}/>
+        showProductType = <ProductItems className={classes.myproducts} boxShadow='none'  url='productTypeUrl' products={filteredProducts.filter(products => products.category === params.productCategory)}/>
     }
 
    

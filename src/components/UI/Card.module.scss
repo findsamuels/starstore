@@ -4,21 +4,28 @@
 .Card{
     
     @include boxShadow;
-    
+    margin: 0 auto;
+    display: flex;
+    justify-content: center
+    ;
 
     &:hover{
         @include boxShadowHover
     }
 
+    @include respond(phone){
+        width: 80%;
+    }
+
     img{
         width: 100%;
-        max-height: 350px;
-        margin: 0  auto;
-        min-height: 300px;
+        max-height: 250px;
+       
+        min-height: 250px;
 
         @include respond(tablet){
             
-            max-height: 500px;
+            max-height: auto;
         }
     }
 }

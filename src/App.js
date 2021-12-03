@@ -5,6 +5,7 @@ import { Redirect, Route,Switch  } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {getProducts} from './store/productSlice';
 import { authActions } from './store/authSlice';
+import Loading from './components/UI/Loading';
 
 const Home = React.lazy(() => import('./pages/Home'))
 const Products = React.lazy(()=> import('./pages/Products'))
@@ -19,7 +20,7 @@ function App() {
   const dispatch = useDispatch()
 
   
-  const {isAuth,remainingTime} = useSelector(state => state.auth)
+  const {isAuth} = useSelector(state => state.auth)
   
 useEffect(() => {
   dispatch(getProducts())
@@ -29,11 +30,11 @@ useEffect(() => {
   if(isAuth){
     setTimeout(() => {
       dispatch(authActions.logOut())
-    },remainingTime);
+    },500000);
     
   }
  
-},[dispatch,isAuth,remainingTime])
+},[dispatch,isAuth])
 
 
 
@@ -56,7 +57,7 @@ useEffect(() => {
   return (
     <div className="App">
     <Layout>
-      <Suspense fallback={<p className='centered'>Loading</p>}>
+      <Suspense fallback={<Loading/>}>
         <Switch>
     <Route path='/home' exact>
     <Redirect to='/'></Redirect>

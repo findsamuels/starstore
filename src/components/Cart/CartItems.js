@@ -43,12 +43,12 @@ let cartItem = ''
 cartItem = cartItems.map(item => {
     return(
         <Row key={item.id} className={classes.CartItems}>
- <Col xs='7'>
+ <Col md='7'>
                 <h5>{item.title} <span className={classes.quantity}> * {item.quantity}</span></h5>
                 <p>${item.price.toFixed(2)}</p>
                 </Col> 
 
-                <Col xs='3' className={classes.addAndRemove}>
+                <Col md='3' className={classes.addAndRemove}>
                     <div onClick={() => removeProductHandler(item.id, item.title, item.price, item.totalItemPrice,item.disabled)} className={classes.icons}>
                     <Icon  icon='minus' />
                     </div>

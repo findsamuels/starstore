@@ -11,6 +11,12 @@
    
 }
 
+.myproducts{
+    @include respond(phone){
+        width: 90%;
+    }
+}
+
 .Products {
     min-height: 350px;
     height: auto;

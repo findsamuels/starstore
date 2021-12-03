@@ -32,15 +32,17 @@ let url = '';
         
 
         return(
-            <Col key={item.id} md='3'  className={classes.ProductItems}>
+            <Col key={item.id} md='3'  className={`${classes.ProductItems} ${props.className}`}>
+                
             <Link 
 
             to={url} >
       <Card boxShadow={props.boxShadow} Key={item.id} className={classes.Products} >
       <img src={item.image} alt={item.id}/>
                 <div className={classes.descAndTitle}>
-                <h5>{item.title}</h5>
+                <h5>{item.title.substring(0, 20)}</h5>
                 {item.price && <h5 className={classes.price}>${item.price}</h5>}
+
                 </div> 
                 
             

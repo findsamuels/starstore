@@ -7,6 +7,8 @@ import {  Row } from 'react-bootstrap'
 import ProductItems from '../components/products/ProductItems'
 import Wrapper from '../components/UI/Wrapper'
 import PageHeader from '../components/PageHeader'
+import classes from './Products.module.scss'
+import Loading from '../components/UI/Loading'
 
 
 
@@ -15,7 +17,7 @@ const Products = () => {
     let myProducts = ''
     const {allProducts, loading,errorMessage,filteredProducts}  = useSelector(state => state.products)
     if(loading){
-        myProducts = <p>Loading...</p>  
+        myProducts = <Loading/>  
    
     }
     else if(!loading && errorMessage !== null){
@@ -25,12 +27,12 @@ const Products = () => {
    
   
    else if(filteredProducts.length === 0 ){
-    myProducts = <ProductItems boxShadow='none' url='productUrl'   
+    myProducts = <ProductItems className={classes.myproducts} boxShadow='none' url='productUrl'   
     products={allProducts.filter(products => products.category !== 'electronics')}/>
 
     }
     else if(filteredProducts.length !== 0){
-      myProducts =   <ProductItems boxShadow='none' url='productUrl'   
+      myProducts =   <ProductItems className={classes.myproducts} boxShadow='none' url='productUrl'   
       products={filteredProducts.filter(products => products.category !== 'electronics')}/>
         
 

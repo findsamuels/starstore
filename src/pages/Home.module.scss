@@ -1,1 +1,9 @@
 @import '../main.scss';
+
+
+.homeProduct{
+    @include respond(phone){
+        width: 90%;
+    }
+   
+}

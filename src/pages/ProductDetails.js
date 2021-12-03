@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 
 import Wrapper from '../components/UI/Wrapper'
 import SelectedProduct from '../components/products/SelectedProduct'
+import Loading from '../components/UI/Loading'
 
 
 
@@ -21,7 +22,7 @@ const ProductDetails = () => {
     let selectedProductDiv = ''
 
     if(loading){
-        selectedProductDiv = <p>Loading...</p>  
+        selectedProductDiv = <Loading/>  
     }
     else if(!loading && errorMessage !== null){
         selectedProductDiv = <p>{errorMessage}</p>  

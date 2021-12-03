@@ -78,8 +78,9 @@ switch (props.elementconfig) {
             <label htmlFor={props.id}>{props.label}</label>
      
             <input
+            
         {...props}
-        className={`${classes.Input} ${props.className} ${classes[props.display]} ${!isvalid && classes.invalid} ${ inputvalid}`}
+        className={`${classes.Input} ${props.className}  ${classes[props.display]} ${!isvalid && classes.invalid} ${ inputvalid}`}
         
         />
         </Fragment>

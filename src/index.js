@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import './index.css';
 import App from './App';
-
+import { initializeApp } from 'firebase/app';
 import reportWebVitals from './reportWebVitals';
 import store from './store/Index';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -14,7 +14,18 @@ import {BrowserRouter} from 'react-router-dom'
 
 library.add(fab, faCheckSquare, faCartPlus, faPlus, faMinus, faWindowClose)
 
+const firebaseConfig = {
+  apiKey: "AIzaSyCzZIZNcakxDaNMSHEHJ56wATc9jPh1-n8",
+  authDomain: "starstore-84df.firebaseapp.com",
+  projectId: "starstore-84df",
+  storageBucket: "starstore-84df.appspot.com",
+  messagingSenderId: "911165507837",
+  appId: "1:911165507837:web:ae51c2e3451527007a1694",
+  measurementId: "G-F9DB15JREB"
+};
+
 const app = (
+  initializeApp(firebaseConfig),
   <BrowserRouter>
     <Provider store={store}>
     <App/>
